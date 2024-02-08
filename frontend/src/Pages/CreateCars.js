@@ -32,7 +32,11 @@ function CreateCars() {
  const handleSubmit = async (e) => {
   e.preventDefault();
   try {
-   const response = await axios.post(`https://danabackend.onrender.com/api/sendData`, formData);
+   const response = await axios.post(`https://danabackend.onrender.com/api/sendData`, formData,
+    {
+     headers: {
+      'Content-Type': 'application/json' // Set Content-Type header to application/json
+     }});
    // Display success alert
    Swal.fire({
     icon: 'success',
@@ -197,7 +201,7 @@ function CreateCars() {
      <button
       className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
       type="submit"
-      
+
      >
       Submit
      </button>
