@@ -18,15 +18,14 @@ function CreateCars() {
   price: '',
   color: '',
   mileage: '',
-  description: '',
-  available: true
+  description: ''
  });
 
  const handleChange = (e) => {
   const { name, value } = e.target;
   setFormData((prevFormData) => ({
    ...prevFormData,
-   [name]: value,
+   [name]: value
   }));
  };
 

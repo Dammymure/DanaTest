@@ -22,7 +22,6 @@ const CreateProduct = async (req, res) => {
    mileage,
    price,
    description,
-   available: true,
   })
 
   res.status(201).json({ msg: "Your product has been registered", newProduct })
