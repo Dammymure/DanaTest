@@ -19,6 +19,7 @@ function CreateCars() {
   color: '',
   mileage: '',
   description: '',
+  available: true
  });
 
  const handleChange = (e) => {
