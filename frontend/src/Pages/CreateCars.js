@@ -32,7 +32,7 @@ function CreateCars() {
  const handleSubmit = async (e) => {
   e.preventDefault();
   try {
-   const response = await axios.post(`${process.env.REACT_APP_API_URL}/create-product`, formData);
+   const response = await axios.post(`https://danabackend.onrender.com/create-product`, formData);
    // Display success alert
    Swal.fire({
     icon: 'success',

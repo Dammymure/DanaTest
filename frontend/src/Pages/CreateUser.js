@@ -20,7 +20,7 @@ function CreateUser() {
     e.preventDefault();
     try {
       // Send POST request to backend endpoint
-      const response = await axios.post(`${process.env.REACT_APP_API_URL}/register/createuser`, formData);
+      const response = await axios.post(`https://danabackend.onrender.com/register/createuser`, formData);
       // Update response message state with server response
       setResponseMsg(response.data.msg);
 

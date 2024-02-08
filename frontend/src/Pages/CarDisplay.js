@@ -14,7 +14,7 @@ function ProductList() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/receiveData`, {
+        const response = await axios.get(`https://danabackend.onrender.com/api/receiveData`, {
           headers: {
             Authorization: `Bearer ${storedToken}` // Include token in the headers
           }
