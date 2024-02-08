@@ -240,10 +240,17 @@ function CreateCars() {
   }));
  };
 
+ const storedToken = localStorage.getItem('token');
+
+
  const handleSubmit = async (e) => {
   e.preventDefault();
   try {
-   const response = await axios.post(`https://danabackend.onrender.com/api/sendData`, formData);
+   const response = await axios.post(`https://danabackend.onrender.com/api/sendData`, formData, {
+    headers: {
+     Authorization: `Bearer ${storedToken}` // Include token in the headers
+    }
+   });
    Swal.fire({
     icon: 'success',
     title: 'Success',
