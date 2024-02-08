@@ -102,24 +102,10 @@ function CreateCars() {
      <input
       className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
       id="make"
-      name="sellerLocation"
+      name="make"
       type="text"
       placeholder="make"
       value={formData.make}
-      onChange={handleChange}
-     />
-    </div>
-    <div className="mb-4">
-     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="make">
-      Model
-     </label>
-     <input
-      className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-      id="model"
-      name="model"
-      type="text"
-      placeholder="model"
-      value={formData.model}
       onChange={handleChange}
      />
     </div>
@@ -134,20 +120,6 @@ function CreateCars() {
       type="text"
       placeholder="model"
       value={formData.model}
-      onChange={handleChange}
-     />
-    </div>
-    <div className="mb-4">
-     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="year">
-      Year
-     </label>
-     <input
-      className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-      id="year"
-      name="year"
-      type="text"
-      placeholder="year"
-      value={formData.year}
       onChange={handleChange}
      />
     </div>
