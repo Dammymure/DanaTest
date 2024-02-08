@@ -29,7 +29,7 @@ function CreateUser() {
         title: 'Success!',
         text: response.data.msg,
         showConfirmButton: false,
-        timer: 2000 // Close SweetAlert after 2 seconds
+        timer: 2000 
       });
       navigate("/login")
     } catch (error) {

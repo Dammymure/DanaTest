@@ -16,7 +16,7 @@ function ProductList() {
       try {
         const response = await axios.get(`https://danabackend.onrender.com/api/receiveData`, {
           headers: {
-            Authorization: `Bearer ${storedToken}` // Include token in the headers
+            Authorization: `Bearer ${storedToken}` 
           }
         });
         setProducts(response.data);
@@ -73,7 +73,6 @@ function ProductList() {
                     }`}
                 ></p>
               </div>
-              {/* <p>{car.picturePaths}</p> */}
               <div className="flex justify-end">
                 <button className="text-sm text-white bg-black px-2 py-1 rounded-full hover:bg-black/90">
                   View

@@ -11,6 +11,8 @@ import { useStateContext } from './context/ContextProvider'
 
 function App() {
   const { token, setToken } = useStateContext()
+  const storedToken = localStorage.getItem('token');
+
   return (
     <div>
       <BrowserRouter>
@@ -20,8 +22,10 @@ function App() {
       <Route path="/createuser" element={<CreateUser/>}/>
       <Route path="/login" element={<Login/>}/>
 
-      <Route path="/cars" element={<CarDisplay />} /> 
-      <Route path='/createcars' element={<CreateCars/>}/>
+          {storedToken ? <Route path="/cars" element={<CarDisplay />} /> :""}
+
+          {storedToken ? <Route path='/createcars' element={<CreateCars />} /> :""}
+      
       
       
         {/* <Routes/> */}
