@@ -21,6 +21,19 @@ function CreateCars() {
   description: ''
  });
 
+ const dataToSend = {
+  sellerId: formData.sellerId,
+  sellerName: formData.sellerName,
+  sellerLocation: formData.sellerLocation,
+  make: formData.make,
+  model: formData.model,
+  year: formData.year,
+  price: formData.price,
+  color: formData.color,
+  mileage: formData.mileage,
+  description: formData.description
+ };
+
  const handleChange = (e) => {
   const { name, value } = e.target;
   setFormData((prevFormData) => ({
@@ -32,11 +45,7 @@ function CreateCars() {
  const handleSubmit = async (e) => {
   e.preventDefault();
   try {
-   const response = await axios.post(`https://danabackend.onrender.com/api/sendData`, formData,
-    {
-     headers: {
-      'Content-Type': 'application/json' // Set Content-Type header to application/json
-     }});
+   const response = await axios.post(`https://danabackend.onrender.com/api/sendData`, dataToSend);
    // Display success alert
    Swal.fire({
     icon: 'success',
